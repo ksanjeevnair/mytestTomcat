@@ -10,7 +10,6 @@ import net.java.trueupdate.agent.spec.*;
  */
 public class ApplicationListener extends UpdateAgentListener {
 
-    System.Out.println "HEllo there";
     // The update manager has already applied filtering and sends fully
     // populated (but not formatted) LogRecord instances, so obtaining any
     // other Logger may yield undesirable side effects.
