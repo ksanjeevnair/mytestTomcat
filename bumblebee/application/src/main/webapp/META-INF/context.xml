@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" path="/application">
+    <Resource auth="Container"
+              factory="org.apache.activemq.jndi.JNDIReferenceFactory"
+              name="update/connection-factory"
+              brokerURL="${agent.brokerURL}"
+              description="JMS Connection Factory"
+              type="org.apache.activemq.ActiveMQConnectionFactory"/>
+    <Resource auth="Container"
+              factory="org.apache.activemq.jndi.JNDIReferenceFactory"
+              name="update/agent"
+              physicalName="update.agent"
+              type="org.apache.activemq.command.ActiveMQQueue"/>
+    <Resource auth="Container"
+              factory="org.apache.activemq.jndi.JNDIReferenceFactory"
+              name="update/manager"
+              physicalName="update.manager"
+              type="org.apache.activemq.command.ActiveMQQueue"/>
+</Context>
