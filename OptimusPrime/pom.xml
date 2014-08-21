@@ -680,7 +680,6 @@
                 <cargo.container.url>http://easynews.dl.sourceforge.net/sourceforge/jboss/jboss-4.0.5.GA.zip</cargo.container.url>
             </properties>
         </profile>
-            <profiles>
         <profile>
             <id>sonar</id>
             <activation>
@@ -701,7 +700,6 @@
             </properties>
         </profile>
      </profiles>
-    </profiles>
 
     <properties>
         <!-- Application settings -->
