@@ -122,7 +122,6 @@
                     <tag>${project.artifactId}-${project.version}</tag>
                 </configuration>
         </plugin>
-    </plugins>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>dbunit-maven-plugin</artifactId>
