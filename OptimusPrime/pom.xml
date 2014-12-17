@@ -19,13 +19,13 @@
             <url></url>
         </license>
     </licenses>
-
+-->
     <scm>
-        <connection></connection>
+        <connection>scm:git:https://github.com/ksanjeevnair/mytestTomcat.git</connection>
         <developerConnection></developerConnection>
         <url></url>
     </scm>
-
+<!--
     <issueManagement>
         <system></system>
         <url></url>
@@ -112,6 +112,19 @@
             </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+                <version>2.1</version>
+            </plugin>
+        <plugin>
+                <artifactId>maven-scm-plugin</artifactId>
+                <version>1.8.1</version>
+                <configuration>
+                    <tag>${project.artifactId}-${project.version}</tag>
+                </configuration>
+        </plugin>
+    </plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
                 <artifactId>dbunit-maven-plugin</artifactId>
                 <version>1.0-beta-3</version>
                 <configuration>
@@ -140,6 +153,7 @@
                         <phase>test</phase>
                         <goals>
                             <goal>operation</goal>
+
                         </goals>
                     </execution>
                 </executions>
