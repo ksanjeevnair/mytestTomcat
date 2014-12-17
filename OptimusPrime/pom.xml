@@ -122,6 +122,18 @@
                     <tag>${project.artifactId}-${project.version}</tag>
                 </configuration>
         </plugin>
+        <plugin>
+        <groupId>org.liquibase</groupId>
+        <artifactId>liquibase-maven-plugin</artifactId>
+        <configuration>
+          <changeLogFile>${basedir}/src/main/resources/db/db.changelog.xml</changeLogFile>
+          <driver>com.mysql.jdbc.Driver</driver>
+          <url>jdbc:mysql://${mysql.host}:${mysql.port}/${mysql.db}</url>
+          <username>sanjeev</username>
+     <!--     <username>${mysql.login}</username> -->
+          <password>sanjeev</password>
+        </configuration>
+      </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>dbunit-maven-plugin</artifactId>
@@ -484,6 +496,22 @@
     </reporting>
 
     <profiles>
+    <profile>
+      <id>dev</id>
+      <properties>
+        <mysql.host>ec2-54-149-202-240.us-west-2.compute.amazonaws.com</mysql.host>
+        <mysql.port>3306</mysql.port>
+        <mysql.db>myproject</mysql.db>
+      </properties>
+    </profile>
+    <profile>
+      <id>test</id>
+      <properties>
+        <mysql.host>test-db.example.com</mysql.host>
+        <mysql.port>3306</mysql.port>
+        <mysql.db>example-db</mysql.db>
+      </properties>
+    </profile>
         <profile>
             <id>itest</id>
             <build>
