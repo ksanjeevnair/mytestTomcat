@@ -1,0 +1,28 @@
+19:54:51,483 INFO  [org.openqa.selenium.server.SeleniumServer] Java: Oracle Corporation 25.5-b02
+19:54:51,483 INFO  [org.openqa.selenium.server.SeleniumServer] OS: Windows 8 6.2 x86
+19:54:51,488 INFO  [org.openqa.selenium.server.SeleniumServer] v2.25.0, with Core v2.25.0. Built from revision 17482
+19:54:51,565 INFO  [org.openqa.selenium.server.SeleniumServer] RemoteWebDriver instances should connect to: http://127.0.0.1:4444/wd/hub
+19:54:51,565 INFO  [org.openqa.jetty.http.HttpServer] Version Jetty/5.1.x
+19:54:51,566 INFO  [org.openqa.jetty.util.Container] Started HttpContext[/selenium-server,/selenium-server]
+19:54:52,048 INFO  [org.openqa.jetty.util.Container] Started org.openqa.jetty.jetty.servlet.ServletHandler@24a67
+19:54:52,048 INFO  [org.openqa.jetty.util.Container] Started HttpContext[/wd,/wd]
+19:54:52,048 INFO  [org.openqa.jetty.util.Container] Started HttpContext[/selenium-server/driver,/selenium-server/driver]
+19:54:52,048 INFO  [org.openqa.jetty.util.Container] Started HttpContext[/,/]
+19:54:52,051 INFO  [org.openqa.jetty.http.SocketListener] Started SocketListener on 0.0.0.0:4444
+19:54:52,051 INFO  [org.openqa.jetty.util.Container] Started org.openqa.jetty.jetty.Server@126097b
+19:54:52.173 INFO - Checking Resource aliases
+19:54:52,177 INFO  [org.openqa.jetty.util.Credential] Checking Resource aliases
+19:54:52,181 WARN  [org.openqa.jetty.http.HttpConnection] POST /selenium-server/driver/?seleniumStart=true&localFrameAddress=top&seleniumWindowName=&uniqueId=sel_14672&sessionId=54f9f155c7644e0b9b9c6c877fc6705f&counterToMakeURsUniqueAndSoStopPageCachingInTheBrowser=1405533287555&sequenceNumber=12 HTTP/1.1
+java.lang.RuntimeException: sessionId 54f9f155c7644e0b9b9c6c877fc6705f doesn't exist; perhaps this session was already stopped?
+	at org.openqa.selenium.server.FrameGroupCommandQueueSet.getQueueSet(FrameGroupCommandQueueSet.java:225)
+	at org.openqa.selenium.server.SeleniumDriverResourceHandler.handleBrowserResponse(SeleniumDriverResourceHandler.java:189)
+	at org.openqa.selenium.server.SeleniumDriverResourceHandler.handle(SeleniumDriverResourceHandler.java:153)
+	at org.openqa.jetty.http.HttpContext.handle(HttpContext.java:1526)
+	at org.openqa.jetty.http.HttpContext.handle(HttpContext.java:1479)
+	at org.openqa.jetty.http.HttpServer.service(HttpServer.java:914)
+	at org.openqa.jetty.http.HttpConnection.service(HttpConnection.java:820)
+	at org.openqa.jetty.http.HttpConnection.handleNext(HttpConnection.java:986)
+	at org.openqa.jetty.http.HttpConnection.handle(HttpConnection.java:837)
+	at org.openqa.jetty.http.SocketListener.handleConnection(SocketListener.java:243)
+	at org.openqa.jetty.util.ThreadedServer.handle(ThreadedServer.java:357)
+	at org.openqa.jetty.util.ThreadPool$PoolThread.run(ThreadPool.java:534)
