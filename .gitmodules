@@ -1,0 +1,3 @@
+[submodule "OptimusPrimePuppet"]
+	path = OptimusPrimePuppet
+	url = https://github.com/ksanjeevnair/OptimusPrimePuppet.git
