@@ -488,7 +488,7 @@
 		<profile>
 			<id>dev</id>
 			<properties>
-				<mysql.host>ec2-54-149-202-240.us-west-2.compute.amazonaws.com</mysql.host>
+				<mysql.host>ec2-54-149-235-30.us-west-2.compute.amazonaws.com</mysql.host>
 				<mysql.port>3306</mysql.port>
 				<mysql.db>myproject</mysql.db>
 			</properties>
