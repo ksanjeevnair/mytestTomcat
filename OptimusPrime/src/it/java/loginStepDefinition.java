@@ -17,6 +17,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
+import org.springframework.core.io.ClassPathResource;
 
 public class loginStepDefinition {
 
@@ -42,7 +43,10 @@ public class loginStepDefinition {
 	    // Express the Regexp above with the code you wish you had
 		   // throw new PendingException();
 		WebDriver driver = new HtmlUnitDriver();
-		driver.get("http://ec2-54-149-235-30.us-west-2.compute.amazonaws.com:8080/OptimusPrime/");
+		
+		String host_under_test = System.getProperty("host_under_test");
+		System.out.println("the url is" + host_under_test);
+		driver.get(host_under_test);
 		assertTrue(driver.getTitle().startsWith("Login"));
 		
 	    System.out.println("sanjeev entered his username and password");
