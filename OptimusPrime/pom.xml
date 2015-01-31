@@ -496,9 +496,9 @@
 		<profile>
 			<id>test</id>
 			<properties>
-				<mysql.host>test-db.example.com</mysql.host>
+				<mysql.host>ec2-54-149-152-82.us-west-2.compute.amazonaws.com</mysql.host>
 				<mysql.port>3306</mysql.port>
-				<mysql.db>example-db</mysql.db>
+				<mysql.db>myproject</mysql.db>
 			</properties>
 		</profile>
 		<profile>
