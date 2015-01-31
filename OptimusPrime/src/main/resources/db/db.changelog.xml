@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.2.xsd">
-    <changeSet author="s.nair (generated)" id="1407698368198-1">
+    <changeSet author="s.nair (generated)" id="1407698368198-1" runOnChange="true">
         <createTable tableName="app_user">
             <column autoIncrement="true" name="id" type="BIGINT(19)">
                 <constraints primaryKey="true"/>
@@ -41,7 +41,7 @@
             <column name="website" type="VARCHAR(255)"/>
         </createTable>
     </changeSet>
-    <changeSet author="s.nair (generated)" id="1407698368198-2">
+    <changeSet author="s.nair (generated)" id="1407698368198-2" runOnChange="true">
         <createTable tableName="role">
             <column autoIncrement="true" name="id" type="BIGINT(19)">
                 <constraints primaryKey="true"/>
@@ -50,7 +50,7 @@
             <column name="name" type="VARCHAR(20)"/>
         </createTable>
     </changeSet>
-    <changeSet author="s.nair (generated)" id="1407698368198-3">
+    <changeSet author="s.nair (generated)" id="1407698368198-3" runOnChange="true">
         <createTable tableName="user_role">
             <column name="user_id" type="BIGINT(19)">
                 <constraints nullable="false"/>
@@ -60,19 +60,19 @@
             </column>
         </createTable>
     </changeSet>
-    <changeSet author="s.nair (generated)" id="1407698368198-4">
+    <changeSet author="s.nair (generated)" id="1407698368198-4" runOnChange="true">
         <addPrimaryKey columnNames="user_id, role_id" constraintName="PRIMARY" tableName="user_role"/>
     </changeSet>
-    <changeSet author="s.nair (generated)" id="1407698368198-5">
+    <changeSet author="s.nair (generated)" id="1407698368198-5" runOnChange="true">
         <addUniqueConstraint columnNames="email" constraintName="email" deferrable="false" disabled="false" initiallyDeferred="false" tableName="app_user"/>
     </changeSet>
-    <changeSet author="s.nair (generated)" id="1407698368198-6">
+    <changeSet author="s.nair (generated)" id="1407698368198-6" runOnChange="true">
         <addUniqueConstraint columnNames="username" constraintName="username" deferrable="false" disabled="false" initiallyDeferred="false" tableName="app_user"/>
     </changeSet>
-    <changeSet author="s.nair (generated)" id="1407698368198-7">
+    <changeSet author="s.nair (generated)" id="1407698368198-7" runOnChange="true">
         <addForeignKeyConstraint baseColumnNames="role_id" baseTableName="user_role" constraintName="FK143BF46A4FD90D75" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="role"/>
     </changeSet>
-    <changeSet author="s.nair (generated)" id="1407698368198-8">
+    <changeSet author="s.nair (generated)" id="1407698368198-8" runOnChange="true">
         <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="user_role" constraintName="FK143BF46AF503D155" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="app_user"/>
     </changeSet>
 </databaseChangeLog>
