@@ -5,6 +5,18 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.And;
 import cucumber.api.PendingException;
 import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertTrue;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
 
 public class loginStepDefinition {
 
@@ -29,6 +41,10 @@ public class loginStepDefinition {
 	public void the_user_enters_the_username_and_password_and_clicks_login() throws Throwable {
 	    // Express the Regexp above with the code you wish you had
 		   // throw new PendingException();
+		WebDriver driver = new HtmlUnitDriver();
+		driver.get("http://ec2-54-149-235-30.us-west-2.compute.amazonaws.com:8080/OptimusPrime/");
+		assertTrue(driver.getTitle().startsWith("Login"));
+		
 	    System.out.println("sanjeev entered his username and password");
 	}
 
