@@ -111,7 +111,8 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<configuration>
 					<excludes>
-						<exclude>**/BaseControllerTestCase.java</exclude>
+						<exclude>**/*.java</exclude>
+
 					</excludes>
 				</configuration>
 			</plugin>
