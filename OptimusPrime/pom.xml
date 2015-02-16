@@ -124,7 +124,7 @@
 					<url>jdbc:mysql://${mysql.host}:${mysql.port}/${mysql.db}</url>
 					<username>sanjeev</username>
 					<!-- <username>${mysql.login}</username> -->
-					<password>sanjeev</password>
+					<password>__mysql_user_password__</password>
 				</configuration>
 			</plugin>
 			<plugin>
