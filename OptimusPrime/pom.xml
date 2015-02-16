@@ -112,7 +112,6 @@
 				<configuration>
 					<excludes>
 						<exclude>**/BaseControllerTestCase.java</exclude>
-
 					</excludes>
 				</configuration>
 			</plugin>
