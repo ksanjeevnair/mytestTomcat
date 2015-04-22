@@ -869,7 +869,7 @@
 		<web.framework>spring</web.framework>
 		<amp.genericCore>true</amp.genericCore>
 		<amp.fullSource>false</amp.fullSource>
-		<db.name>myproject</db.name>
+		<db.name>rajani</db.name>
 
 		<!-- Framework dependency versions -->
 		<appfuse.version>3.0.0</appfuse.version>
