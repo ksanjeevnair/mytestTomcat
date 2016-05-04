@@ -1,1 +1,3 @@
-sh "${mvnHome}/bin/mvn -B verify"
+dir('OptimusPrime') {
+sh "mvn -B -Dmaven.test.failure.ignore verify"
+}
